@@ -1,9 +1,8 @@
 module.exports = {
-	HOST:
-		"ls-261b0303e5b71f49201112554e37b4d7d83334da.cddg2rhiljs2.ap-south-1.rds.amazonaws.com",
-	USER: "dbmasteruser",
-	PASSWORD: "VWs(e8N_i`W%dUc$eV1-7z[[zYN7-dm}",
-	DB: "rovoox",
+	HOST:process.env.DB_HOST,
+	USER: process.env.DB_USER,
+	PASSWORD: process.env.DB_PASS,
+	DB: process.env.MYSQL_DB,
 	dialect: "mysql",
 	pool: {
 		max: 5,
