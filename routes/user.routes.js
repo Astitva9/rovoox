@@ -45,5 +45,20 @@ body
   ]),
   controller.getUserdetailsByUsername);
 
+  app.post("/api/user/game/play",
+  checkToken,
+  validate([
+    body('USERNAME').trim().not().isEmpty().withMessage('Please provide the Unique ID.')
+  ]), controller.gamePlay);
+
+  app.post("/api/user/game/claim_bonus",
+  checkToken,
+  validate([
+    body('USERNAME').trim().not().isEmpty().withMessage('Please provide the Unique ID.')
+  ]), controller.claimBonus);
+
+  app.get("/api/user/leaderboard",
+  controller.getLeaderBoard);
+
 
 };

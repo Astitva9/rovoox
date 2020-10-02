@@ -42,5 +42,4 @@ app.post(
   controller.signup
 );
 
-  
 };

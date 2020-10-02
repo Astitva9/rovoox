@@ -11,8 +11,6 @@ exports.signup = async (req, res) => {
   
   const body = req.body;
 
-  console.log('Body Received data',body);
-
   try {
 
     var result = await User.create({
@@ -22,8 +20,6 @@ exports.signup = async (req, res) => {
     });
 
     let user_details=JSON.parse(JSON.stringify(result));
-    console.log('result',JSON.parse(JSON.stringify(result)));
-    console.log('user_id',user_details.id);
 
     if(user_details){
 
